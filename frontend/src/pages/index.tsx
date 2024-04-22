@@ -1,15 +1,9 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 import ReactFlow, {
-  NodeToolbar,
-  Position,
-  Handle,
   ReactFlowProvider,
   Controls,
   Background,
-  applyNodeChanges,
-  applyEdgeChanges,
-  addEdge
 } from 'reactflow';
 import 'reactflow/dist/style.css';
 import 'semantic-ui-css/semantic.min.css'
@@ -23,21 +17,6 @@ function Flow() {
   const [nodes, setNodes] = useState([]);
   const [edges, setEdges] = useState([]);
     
-  const onNodesChange = useCallback(
-    (changes) => setNodes((nds) => applyNodeChanges(changes, nds)),
-    [],
-  );
-  const onEdgesChange = useCallback(
-    (changes) => setEdges((eds) => applyEdgeChanges(changes, eds)),
-    [],
-  );
-  const onConnect = useCallback(
-    (params) => setEdges((eds) => addEdge(params, eds)),
-    [],
-  );
-
-  const [windowHeight, setWindowHeight] = useState(0);
-
   const [count, setCount] = useState(0);
   const runDag = () => {
     fetch("http://127.0.0.1:8080/run", {
@@ -69,6 +48,7 @@ function Flow() {
     };
   }, [count]);
 
+  const [windowHeight, setWindowHeight] = useState(0);
   useEffect(() => {
     setWindowHeight(window.innerHeight);
 
@@ -93,9 +73,6 @@ function Flow() {
           <ReactFlow 
             nodes={nodes} 
             edges={edges}
-            onNodesChange={onNodesChange}
-            onEdgesChange={onEdgesChange}
-            onConnect={onConnect}
             fitView 
           >
             <Background /> 

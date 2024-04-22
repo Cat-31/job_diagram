@@ -53,7 +53,6 @@ public class Node {
 
         style.put("color", color[status]);
         style.put("backgroundColor", bgColor[status]);
-
     }
 
     public int getStatus() {
