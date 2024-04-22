@@ -1,0 +1,115 @@
+{
+  "nodes": [
+    {
+      "id": "1",
+      "data": {
+        "jobId": "A01Job",
+        "label": "A01Job"
+      },
+      "position": {
+        "x": 200,
+        "y": 0
+      },
+      "type": "input"
+    },
+    {
+      "id": "2",
+      "data": {
+        "jobId": "A02Job",
+        "label": "A02Job"
+      },
+      "position": {
+        "x": 70,
+        "y": 125
+      }
+    },
+    {
+      "id": "3",
+      "data": {
+        "jobId": "A03Job",
+        "label": "A03Job"
+      },
+      "position": {
+        "x": 230,
+        "y": 125
+      }
+    },
+    {
+      "id": "4",
+      "data": {
+        "jobId": "A04Job",
+        "label": "A04Job"
+      },
+      "position": {
+        "x": 170,
+        "y": 250
+      }
+    },
+    {
+      "id": "5",
+      "data": {
+        "jobId": "A05Job",
+        "label": "A05Job"
+      },
+      "position": {
+        "x": 430,
+        "y": 125
+      }
+    },
+    {
+      "id": "6",
+      "data": {
+        "jobId": "A06Job",
+        "label": "A06Job"
+      },
+      "position": {
+        "x": 200,
+        "y": 375
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "1-2",
+      "source": "1",
+      "target": "2",
+      "label": ""
+    },
+    {
+      "id": "1-3",
+      "source": "1",
+      "target": "3",
+      "label": ""
+    },
+    {
+      "id": "2-4",
+      "source": "2",
+      "target": "4",
+      "label": ""
+    },
+    {
+      "id": "3-4",
+      "source": "3",
+      "target": "4",
+      "label": ""
+    },
+    {
+      "id": "4-6",
+      "source": "4",
+      "target": "6",
+      "label": ""
+    },
+    {
+      "id": "1-5",
+      "source": "1",
+      "target": "5",
+      "label": ""
+    },
+    {
+      "id": "5-6",
+      "source": "5",
+      "target": "6",
+      "label": ""
+    }
+  ]
+}
